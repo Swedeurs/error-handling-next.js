@@ -4,7 +4,6 @@ import { dashboardService } from "../instance";
 export async function DashboardForm() {
   const animal = await dashboardService.getOne();
   const name = await dashboardService.getLatestName();
-  console.log(name);
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-red-800 p-6">
       <form
