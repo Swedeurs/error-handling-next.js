@@ -1,6 +1,7 @@
+import { DashboardForm } from "@/features/dashboard/components/dashboard-form";
 
 export default function Page() {
     return (
-        <>Hej hej från dashboard page</>
-    )
+        <DashboardForm />
+    );
 }

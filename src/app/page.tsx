@@ -2,6 +2,6 @@
 
 export default function Home() {
   return (
-    <>Hej Hej</>
+    <p>Hej Hej</p>
   )
 }
