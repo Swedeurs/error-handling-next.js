@@ -4,28 +4,29 @@ import { dashboardService } from "../instance";
 export async function DashboardForm() {
     const animal = await dashboardService.getOne();
     return (
-        <div className="min-h-screen flex flex-col justify-center items-center bg-gray-900 p-4">
+        <div className="min-h-screen flex flex-col justify-center items-center bg-red-800 p-6">
+            {/* Form */}
             <form
                 action={onButtonClickAction}
-                className="p-6 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 rounded-3xl shadow-xl border-4 border-yellow-400 max-w-md w-full transform hover:rotate-2 hover:scale-105 transition-all duration-500"
+                className="p-8 bg-gradient-to-br from-green-500 via-red-500 to-yellow-300 border-[10px] border-white rounded-[30px] shadow-[0_0_30px_rgba(255,0,0,0.7)] transform hover:rotate-3 hover:scale-105 transition-all duration-500 max-w-md w-full"
             >
-                <h2 className="text-3xl font-extrabold text-white mb-4 text-center drop-shadow-lg animate-bounce">
-                    🚀 Absurd Form 🚀
+                <h2 className="text-4xl font-extrabold text-white text-center drop-shadow-[0_0_10px_rgba(0,0,0,0.5)] animate-wiggle mb-6">
+                    🎅 Absurd Christmas Form 🎄
                 </h2>
 
-                <div className="mb-4">
+                <div className="mb-6">
                     <label
-                        htmlFor="absurdInput"
-                        className="block text-lg font-bold text-yellow-300 mb-2 text-center"
+                        htmlFor="christmasInput"
+                        className="block font-bold text-yellow-200 mb-4 text-center text-normal "
                     >
-                        📝 Your Absurd Input 📝
+                        🎁 Enter Your Christmas Wish 🎁
                     </label>
                     <input
-                        id="absurdInput"
+                        id="christmasInput"
                         type="text"
-                        placeholder="Type your name here..."
+                        placeholder="Santa is watching..."
                         name="name"
-                        className="w-full px-4 py-2 text-md font-bold text-purple-700 bg-yellow-200 border-2 border-pink-500 rounded-full shadow-inner placeholder-pink-400 focus:outline-none focus:ring-2 focus:ring-yellow-300 hover:scale-105 transition-all duration-300"
+                        className="w-full px-5 py-3 text-red-600 font-extrabold bg-white border-4 border-green-400 rounded-full placeholder-red-300 text-center shadow-inner focus:outline-none focus:ring-4 focus:ring-yellow-400 hover:scale-105 transition-all duration-300"
                         required
                     />
                 </div>
@@ -33,18 +34,21 @@ export async function DashboardForm() {
                 <div className="flex justify-center">
                     <button
                         type="submit"
-                        className="px-6 py-2 text-xl font-extrabold text-yellow-300 bg-black border-2 border-yellow-400 rounded-full shadow-lg hover:bg-yellow-400 hover:text-black transform hover:scale-110 hover:rotate-3 transition-all duration-300"
+                        className="px-8 py-3 text-2xl font-extrabold text-red-700 bg-yellow-400 border-4 border-green-500 rounded-full shadow-lg hover:bg-green-400 hover:text-white hover:rotate-6 transform hover:scale-110 transition-all duration-300"
                     >
-                        🦄 Submit 🦄
+                        🎅 Send to Santa 🎅
                     </button>
                 </div>
             </form>
 
-            <div className="mt-6 p-4 bg-gradient-to-r from-green-400 via-blue-500 to-indigo-600 text-white font-extrabold text-2xl text-center rounded-xl shadow-lg transform hover:scale-105 transition-all duration-500 max-w-md w-full">
-                🐾 Your Absurd Animal: 
-                <span className="block mt-2 text-yellow-300 drop-shadow-md animate-spin-slow">
-                    {animal || "Mystery Creature"}
-                </span>
+            {/* Animal Display */}
+            <div className="mt-8 p-6 bg-white border-[8px] border-red-500 rounded-full text-center shadow-[0_0_25px_rgba(0,255,0,0.6)] hover:scale-105 transition-all duration-500 max-w-md w-full">
+                <p className="text-3xl font-extrabold text-green-600 animate-bounce">
+                    🎄 Your Christmas Animal 🎄
+                </p>
+                <p className="mt-4 text-4xl text-red-500 font-extrabold animate-spin-slow drop-shadow-md">
+                    {animal || "Mystical Elf Penguin"}
+                </p>
             </div>
         </div>
     );
