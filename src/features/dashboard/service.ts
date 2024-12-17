@@ -6,10 +6,13 @@ export const createService = (db: Db) => {
       return db;
     },
     async getOne() {
-        return db[Math.floor(Math.random() * db.length )]
+        return db[0][Math.floor(Math.random() * db[0].length )]
     },
     async addName(name: string) {
         return db[1].push(name)
     },
+    async getLatestName() {
+        return db[1][db[1].length - 1]
+    }
   };
 };
