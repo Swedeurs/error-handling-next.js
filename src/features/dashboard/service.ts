@@ -7,6 +7,9 @@ export const createService = (db: Db) => {
     },
     async getOne() {
         return db[Math.floor(Math.random() * db.length )]
-    }
+    },
+    async addName(name: string) {
+        return db[1].push(name)
+    },
   };
 };

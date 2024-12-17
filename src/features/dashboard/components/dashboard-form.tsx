@@ -9,6 +9,26 @@ export function DashboardForm() {
             <h2 className="text-4xl font-extrabold text-white mb-6 text-center drop-shadow-lg animate-bounce">
                 🚀 Absurd Form 🚀
             </h2>
+
+
+            <div className="mb-6">
+                <label
+                    htmlFor="absurdInput"
+                    className="block text-2xl font-bold text-yellow-300 mb-2 text-center"
+                >
+                    📝 Your Absurd Input 📝
+                </label>
+                <input
+                    id="absurdInput"
+                    type="text"
+                    placeholder="Type your name here..."
+                    name="name"
+                    className="w-full px-5 py-3 text-lg font-bold text-purple-700 bg-yellow-200 border-4 border-pink-500 rounded-full shadow-inner placeholder-pink-400 focus:outline-none focus:ring-4 focus:ring-yellow-300 hover:scale-105 transition-all duration-300"
+                    required
+                />
+            </div>
+
+
             <div className="flex justify-center">
                 <button
                     type="submit"
@@ -17,6 +37,8 @@ export function DashboardForm() {
                     🦄 Click Me! 🦄
                 </button>
             </div>
+
+
             <p className="mt-6 text-center text-white font-mono text-lg animate-pulse">
                 * This form does nothing important *
             </p>

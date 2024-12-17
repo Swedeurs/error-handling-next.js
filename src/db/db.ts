@@ -1,7 +1,8 @@
 
-export type Db = string[]
+export type Db = string[][]
 
 export const db: Db = [
+    [
     "Unicorn Llama",
     "Disco Elephant",
     "Rainbow Sloth",
@@ -29,5 +30,7 @@ export const db: Db = [
     "Pizza Dragon",
     "Confetti Porcupine",
     "Bubblegum Spider",
-    "Laser-Tag Fox",
+    "Laser-Tag Fox"
+],
+[],
 ];
