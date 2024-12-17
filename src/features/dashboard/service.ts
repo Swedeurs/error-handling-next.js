@@ -6,22 +6,22 @@ export const createService = (db: Db) => {
       return db;
     },
     async getOne() {
-        return db[0][Math.floor(Math.random() * db[0].length )]
+      return db[0][Math.floor(Math.random() * db[0].length)];
     },
     async addName(name: string) {
-        return db[1].push(name)
+      return db[1].push(name);
     },
     async getLatestName() {
-        return db[1][db[1].length - 1]
+      return db[1][db[1].length - 1];
     },
     async getAllNames() {
-        return db[1]
+      return db[1];
     },
-    async deleteName(name: string) {  
-        const index = db[1].indexOf(name)
-        if (index > -1) {
-            return db[1].splice(index, 1)
-        }
-    }
+    async deleteName(name: string) {
+      const index = db[1].indexOf(name);
+      if (index > -1) {
+        return db[1].splice(index, 1);
+      }
+    },
   };
 };
