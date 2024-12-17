@@ -4,19 +4,22 @@ export function DashboardForm() {
     return (
         <form
             action={onButtonClickAction}
-            className="p-6 bg-gray-100 rounded-lg shadow-lg max-w-sm mx-auto"
+            className="p-8 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 rounded-3xl shadow-2xl border-8 border-yellow-400 max-w-md mx-auto transform hover:rotate-2 hover:scale-105 transition-all duration-500"
         >
-            <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">
-                Dashboard Form
+            <h2 className="text-4xl font-extrabold text-white mb-6 text-center drop-shadow-lg animate-bounce">
+                🚀 Absurd Form 🚀
             </h2>
             <div className="flex justify-center">
                 <button
                     type="submit"
-                    className="px-6 py-2 text-white font-semibold bg-blue-600 hover:bg-blue-700 rounded-md border-2 border-blue-700 transition-all duration-300"
+                    className="px-10 py-4 text-3xl font-extrabold text-yellow-300 bg-black border-4 border-yellow-400 rounded-full shadow-lg hover:bg-yellow-400 hover:text-black transform hover:scale-110 hover:rotate-6 transition-all duration-300"
                 >
-                    Click me!
+                    🦄 Click Me! 🦄
                 </button>
             </div>
+            <p className="mt-6 text-center text-white font-mono text-lg animate-pulse">
+                * This form does nothing important *
+            </p>
         </form>
     );
 }
