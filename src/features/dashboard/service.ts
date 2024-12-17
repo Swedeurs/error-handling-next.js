@@ -13,6 +13,15 @@ export const createService = (db: Db) => {
     },
     async getLatestName() {
         return db[1][db[1].length - 1]
+    },
+    async getAllNames() {
+        return db[1]
+    },
+    async deleteName(name: string) {  
+        const index = db[1].indexOf(name)
+        if (index > -1) {
+            return db[1].splice(index, 1)
+        }
     }
   };
 };

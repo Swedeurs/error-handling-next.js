@@ -3,9 +3,12 @@ import { dashboardService } from "../instance";
 
 export async function DashboardForm() {
     const animal = await dashboardService.getOne();
+    const name = await dashboardService.getLatestName();
+    const names = await dashboardService.getAllNames();
+    console.log(names);
+    console.log(name);
     return (
         <div className="min-h-screen flex flex-col justify-center items-center bg-red-800 p-6">
-            {/* Form */}
             <form
                 action={onButtonClickAction}
                 className="p-8 bg-gradient-to-br from-green-500 via-red-500 to-yellow-300 border-[10px] border-white rounded-[30px] shadow-[0_0_30px_rgba(255,0,0,0.7)] transform hover:rotate-3 hover:scale-105 transition-all duration-500 max-w-md w-full"
@@ -40,14 +43,12 @@ export async function DashboardForm() {
                     </button>
                 </div>
             </form>
-
-            {/* Animal Display */}
             <div className="mt-8 p-6 bg-white border-[8px] border-red-500 rounded-full text-center shadow-[0_0_25px_rgba(0,255,0,0.6)] hover:scale-105 transition-all duration-500 max-w-md w-full">
-                <p className="text-3xl font-extrabold text-green-600 animate-bounce">
+                <p className="text-2xl font-extrabold text-green-600 animate-bounce">
                     🎄 Your Christmas Animal 🎄
                 </p>
-                <p className="mt-4 text-4xl text-red-500 font-extrabold animate-spin-slow drop-shadow-md">
-                    {animal || "Mystical Elf Penguin"}
+                <p className="mt-4 text-2xl text-red-500 font-extrabold animate-spin-slow drop-shadow-md">
+                    {name}
                 </p>
             </div>
         </div>
