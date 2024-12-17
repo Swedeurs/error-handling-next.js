@@ -9,6 +9,7 @@ export const createService = (db: Db) => {
       return db[0][Math.floor(Math.random() * db[0].length)];
     },
     async addName(name: string) {
+      //throw new Error("Error is thrown in addName()");
       return db[1].push(name);
     },
     async getLatestName() {
