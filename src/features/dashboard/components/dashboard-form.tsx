@@ -4,8 +4,6 @@ import { dashboardService } from "../instance";
 export async function DashboardForm() {
     const animal = await dashboardService.getOne();
     const name = await dashboardService.getLatestName();
-    const names = await dashboardService.getAllNames();
-    console.log(names);
     console.log(name);
     return (
         <div className="min-h-screen flex flex-col justify-center items-center bg-red-800 p-6">
@@ -13,14 +11,14 @@ export async function DashboardForm() {
                 action={onButtonClickAction}
                 className="p-8 bg-gradient-to-br from-green-500 via-red-500 to-yellow-300 border-[10px] border-white rounded-[30px] shadow-[0_0_30px_rgba(255,0,0,0.7)] transform hover:rotate-3 hover:scale-105 transition-all duration-500 max-w-md w-full"
             >
-                <h2 className="text-4xl font-extrabold text-white text-center drop-shadow-[0_0_10px_rgba(0,0,0,0.5)] animate-wiggle mb-6">
+                <h2 className="text-4xl font-extrabold text-white text-center drop-shadow-[0_0_10px_rgba(0,0,0,0.5)] animate-wiggle mb-6 animate-pulse">
                     🎅 Absurd Christmas Form 🎄
                 </h2>
 
                 <div className="mb-6">
                     <label
                         htmlFor="christmasInput"
-                        className="block font-bold text-yellow-200 mb-4 text-center text-normal "
+                        className="block font-bold text-yellow-200 mb-4 text-center text-normal animate-bounce"
                     >
                         🎁 Enter Your Christmas Wish 🎁
                     </label>
@@ -48,7 +46,7 @@ export async function DashboardForm() {
                     🎄 Your Christmas Animal 🎄
                 </p>
                 <p className="mt-4 text-2xl text-red-500 font-extrabold animate-spin-slow drop-shadow-md">
-                    {name}
+                    {name ? `${name} wants a ${animal} from Santa` : "No Christmas wishes yet!"}
                 </p>
             </div>
         </div>
