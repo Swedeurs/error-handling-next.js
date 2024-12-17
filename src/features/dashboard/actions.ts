@@ -8,7 +8,7 @@ export const onButtonClickAction = async (formData: FormData) => {
   try {
     await dashboardService.addName(name);
   } catch (error) {
-    throw new Error("Forward error" + error);
+    throw error;
   }
   revalidatePath("/dashboard");
 };
