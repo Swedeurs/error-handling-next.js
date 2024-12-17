@@ -2,7 +2,6 @@ import { onButtonClickAction } from "@/features/dashboard/actions";
 import { dashboardService } from "../instance";
 
 export async function DashboardForm() {
-  //throw new Error("Error is thrown in DashboardForm()")
   const animal = await dashboardService.getOne();
   const name = await dashboardService.getLatestName();
   return (
