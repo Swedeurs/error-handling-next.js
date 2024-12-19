@@ -1,17 +1,13 @@
-"use client";
-
-import { useEffect } from "react";
+'use client';
 
 type Props = {
   error: Error & { digest?: string };
   reset: () => void;
 };
 
-export default function Error({ error, reset }: Props) {
-  useEffect(() => {
-    console.error(error);
-  }, [error]);
 
+
+export default function Error({ error, reset }: Props) {
   const errorMessage = error.message.split("\n").map((line, index) => {
     const parts = line.split(":");
     if (parts.length > 1) {
