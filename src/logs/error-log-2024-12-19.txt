@@ -1,0 +1,30 @@
+Date: 2024-12-19 16:09:55
+Title: Unauthorized error
+Status code: 403
+Message: You are an intruder!! Go home!
+Complete stack: UnauthorizedError: You are an intruder!! Go home!
+    at Object.addName (C:\Users\E15\code\saltsthlm\final-group-project\error-handling-next.js\.next\server\chunks\ssr\[root of the server]__74b59c._.js:132:19)
+    at onButtonClickAction (C:\Users\E15\code\saltsthlm\final-group-project\error-handling-next.js\.next\server\chunks\ssr\[root of the server]__74b59c._.js:289:184)
+    at C:\Users\E15\code\saltsthlm\final-group-project\error-handling-next.js\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:157:2187
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at C:\Users\E15\code\saltsthlm\final-group-project\error-handling-next.js\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:157:2152
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async handleAction (C:\Users\E15\code\saltsthlm\final-group-project\error-handling-next.js\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:156:21940)
+    at async renderToHTMLOrFlightImpl (C:\Users\E15\code\saltsthlm\final-group-project\error-handling-next.js\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:161:22192)
+    at async doRender (C:\Users\E15\code\saltsthlm\final-group-project\error-handling-next.js\node_modules\next\dist\server\base-server.js:1565:34)
+    at async responseGenerator (C:\Users\E15\code\saltsthlm\final-group-project\error-handling-next.js\node_modules\next\dist\server\base-server.js:1813:28)
+    at async DevServer.renderToResponseWithComponentsImpl (C:\Users\E15\code\saltsthlm\final-group-project\error-handling-next.js\node_modules\next\dist\server\base-server.js:1823:28)
+    at async DevServer.renderPageComponent (C:\Users\E15\code\saltsthlm\final-group-project\error-handling-next.js\node_modules\next\dist\server\base-server.js:2250:24)
+    at async DevServer.renderToResponseImpl (C:\Users\E15\code\saltsthlm\final-group-project\error-handling-next.js\node_modules\next\dist\server\base-server.js:2288:32)
+    at async DevServer.pipeImpl (C:\Users\E15\code\saltsthlm\final-group-project\error-handling-next.js\node_modules\next\dist\server\base-server.js:959:25)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\E15\code\saltsthlm\final-group-project\error-handling-next.js\node_modules\next\dist\server\next-server.js:281:17)
+    at async DevServer.handleRequestImpl (C:\Users\E15\code\saltsthlm\final-group-project\error-handling-next.js\node_modules\next\dist\server\base-server.js:853:17)
+    at async C:\Users\E15\code\saltsthlm\final-group-project\error-handling-next.js\node_modules\next\dist\server\dev\next-dev-server.js:371:20
+    at async Span.traceAsyncFn (C:\Users\E15\code\saltsthlm\final-group-project\error-handling-next.js\node_modules\next\dist\trace\trace.js:153:20)
+    at async DevServer.handleRequest (C:\Users\E15\code\saltsthlm\final-group-project\error-handling-next.js\node_modules\next\dist\server\dev\next-dev-server.js:368:24)
+    at async invokeRender (C:\Users\E15\code\saltsthlm\final-group-project\error-handling-next.js\node_modules\next\dist\server\lib\router-server.js:230:21)
+    at async handleRequest (C:\Users\E15\code\saltsthlm\final-group-project\error-handling-next.js\node_modules\next\dist\server\lib\router-server.js:408:24)
+    at async requestHandlerImpl (C:\Users\E15\code\saltsthlm\final-group-project\error-handling-next.js\node_modules\next\dist\server\lib\router-server.js:432:13)
+    at async Server.requestListener (C:\Users\E15\code\saltsthlm\final-group-project\error-handling-next.js\node_modules\next\dist\server\lib\start-server.js:146:13)
+
+-------------------------------------------------------------------------------------
