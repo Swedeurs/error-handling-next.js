@@ -1,12 +1,7 @@
 import { ForbiddenError, NotFoundError, UnauthorizedError } from "./errors";
 import { ZodError } from "zod";
-
-type CustomError =
-  | Error
-  | UnauthorizedError
-  | ForbiddenError
-  | NotFoundError
-  | unknown;
+import { writeToLogFile } from "./write-to-log-file";
+import { CustomError } from "./types";
 
 export const errorHandler = (error: CustomError) => {
   let errorText =
@@ -35,6 +30,6 @@ export const errorHandler = (error: CustomError) => {
       `Status code: 500\n` + 
       `Message: ${error.message}`;
   }
-
-  throw new Error(errorText);
+  writeToLogFile(error, errorText);
+  //throw new Error(errorText);
 };
